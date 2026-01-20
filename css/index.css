@@ -1,0 +1,608 @@
+nav {
+    background-color: #333333;
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-block: 10px;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav .container .logo {
+    width: 5%;
+}
+
+nav .container .logo img {
+    width: 100%;
+}
+
+nav .container .links .burger {
+    display: none;
+    cursor: pointer;
+}
+
+nav .container .links ul {
+    display: flex;
+    list-style: none;
+}
+
+nav .container .links ul li {
+    position: relative;
+}
+
+
+nav .container .links ul li:not(:last-child) {
+    margin-right: 15px;
+}
+
+nav .container .links ul li::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 3px;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition-duration: 0.5s;
+}
+
+nav .container .links ul li:hover::after,
+nav .container .links ul li.active::after {
+    width: 100%;
+}
+
+nav .container .links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition-duration: 0.5s;
+}
+
+nav .container .links ul li a:hover,
+nav .container .links ul li.active a {
+    color: var(--main-color);
+}
+
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/slider.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+}
+
+header .content {
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+
+header .content h4 {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+header .content h1 {
+    font-size: clamp(3rem, 5vw, 5rem);
+    color: var(--main-color);
+    margin-block: 15px;
+}
+
+header .content p {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+header .content p::after {
+    content: "Designer |";
+    animation: animate_2 2s linear infinite;
+    animation-direction: alternate;
+}
+
+header a {
+    display: block;
+    width: 30px;
+    height: 60px;
+    border: 3px solid var(--main-color);
+    border-radius: 15px;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
+header a::before {
+    content: "";
+    display: block;
+    background-color: var(--main-color);
+    width: 10px;
+    height: 10px;
+    border: 3px solid var(--main-color);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: -25%;
+    transform: translate(-50%, -50%);
+    animation: animate_1 2s linear infinite;
+}
+
+
+
+#About .container {
+    display: flex;
+}
+
+#About .container .part1 {
+    flex-basis: 50%;
+}
+
+#About .container .part1 .frame {
+    border: 5px solid var(--main-color);
+    width: 350px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+#About .container .part1 .frame .image {
+    position: relative;
+    transform: translate(20px, 20px);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#About .container .part1 .frame .image img {
+    display: block;
+    height: 100%;
+}
+
+
+#About .container .part1 .frame .layout {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 1s;
+}
+
+#About .container .part1 .frame .image:hover .layout {
+    top: 0;
+}
+
+
+#About .container .part1 .frame .layout ul {
+    list-style: none;
+    display: flex;
+}
+
+#About .container .part1 .frame .layout ul li {
+    transform: translateY(-20px);
+    opacity: 0;
+
+}
+
+
+#About .container .part1 .frame .image:hover .layout ul li:nth-child(1) {
+    transition-delay: 1s;
+}
+
+#About .container .part1 .frame .image:hover .layout ul li:nth-child(2) {
+    transition-delay: 1.2s;
+}
+
+#About .container .part1 .frame .image:hover .layout ul li:nth-child(3) {
+    transition-delay: 1.4s;
+}
+
+#About .container .part1 .frame .image:hover .layout ul li:nth-child(4) {
+    transition-delay: 1.6s;
+}
+
+#About .container .part1 .frame .image:hover .layout ul li {
+    transform: translateY(0px);
+    opacity: 1;
+    transition-duration: 1s;
+    transition-delay: 1s;
+}
+
+#About .container .part1 .frame .layout ul li:not(:last-child) {
+    margin-right: 10px;
+}
+
+#About .container .part1 .frame .layout ul li a {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 100%;
+}
+
+#About .container .part1 .frame .layout ul li a i[class*="facebook"] {
+    color: #3b5998;
+}
+
+#About .container .part1 .frame .layout ul li a i[class*="instagram"] {
+    color: #e4405f;
+}
+
+#About .container .part1 .frame .layout ul li a i[class*="twitter"] {
+    color: #55acee;
+}
+
+#About .container .part1 .frame .layout ul li a i[class*="github"] {
+    color: #333;
+}
+
+#About .container .part2 {
+    flex-basis: 50%;
+    color: #fff;
+}
+
+#About .container .part2>*:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+#About .container .part2 h2 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    border-left: 5px solid var(--main-color);
+    padding-left: 10px;
+}
+
+#About .container .part2 p {
+    line-height: 1.4;
+}
+
+#About .container .part2 hr {
+    border-style: dashed;
+    border-color: #fff;
+}
+
+#About .container .part2 .info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#About .container .part2 .info .collumn {
+    flex-basis: 50%;
+}
+
+#About .container .part2 .info .collumn:not(:last-child, :nth-child(5)) {
+    margin-bottom: 15px;
+}
+
+#About .container .part2 .info .collumn .item {
+    display: flex;
+    align-items: center;
+}
+
+#About .container .part2 .info .collumn .item h5 {
+    margin-right: 5px;
+}
+
+
+#About .container .part2 button {
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: var(--main-color);
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+#About .container .part2 button:nth-child(2) {
+    margin-left: 15px;
+}
+
+#About .container .part2 button:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+#Services .content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#Services .content .card {
+    flex-basis: 25%;
+    text-align: center;
+}
+
+#Services .content .card .item {
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    margin-inline: 10px;
+    padding: 15px 30px;
+    transition-duration: 0.5s;
+    transform: translateY(0px);
+}
+
+#Services .content .card .item:hover {
+    box-shadow:
+        rgba(255, 48, 91, 0.4) 0px 5px,
+        rgba(255, 48, 91, 0.3) 0px 10px,
+        rgba(255, 48, 91, 0.2) 0px 15px,
+        rgba(255, 48, 91, 0.1) 0px 20px,
+        rgba(255, 48, 91, 0.05) 0px 25px,
+        rgba(100, 0, 0, 0.4) -5px 5px 40px;
+    transform: translateY(-10px);
+}
+
+#Services .content .card .item i {
+    font-size: 25px;
+    color: var(--main-color);
+}
+
+#Services .content .card .item h4 {
+    margin-block: 10px;
+}
+
+#Portfolio .content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#Portfolio .content .card {
+    flex-basis: calc(100%/3);
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#Portfolio .content .card .item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#Portfolio .content .card .item img {
+    display: block;
+    height: 100%;
+}
+
+#Portfolio .content .card .item::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 48, 91, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    border-radius: 100%;
+}
+
+#Portfolio .content .card .item:hover::before {
+    width: 100%;
+    height: 100%;
+    border-radius: 0%;
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+#Portfolio .content .card .item h2,
+#Portfolio .content .card .item a {
+    position: absolute;
+}
+
+#Portfolio .content .card .item h2 {
+    top: 18px;
+    left: 100%;
+    background-color: var(--main-color);
+    color: #fff;
+    padding-block: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+
+#Portfolio .content .card .item:hover h2 {
+    transition-duration: 1s;
+    transition-delay: 1s;
+    left: 0;
+}
+
+#Portfolio .content .card .item a {
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    color: var(--main-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+#Portfolio .content .card .item:hover a {
+    transition-duration: 1s;
+    transition-delay: 2s;
+    bottom: 18px;
+}
+
+#Blog .content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#Blog .content .card {
+    width: calc(100%/3);
+}
+
+#Blog .content .card img {
+    display: block;
+}
+
+#Blog .content .card img,
+#Blog .content .card iframe {
+    height: 200px;
+}
+
+#Blog .content .card iframe {
+    width: 100%;
+}
+
+#Blog .content .card .item {
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto;
+    max-width: 280px;
+    max-height: 560px;
+
+}
+
+#Blog .content .card .item .body {
+    padding: 15px;
+}
+
+
+#Blog .content .card .item .body>*:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+#Blog .content .card .item .body h2{
+    font-size: 15px;
+}
+
+#Blog .content .card .item .body p {
+    line-height: 1.8;
+}
+
+#Blog .content .card .item .body button {
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: var(--main-color);
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+#Blog .content .card .item .body button:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+#Blog .content .card .item .body button i {
+    transition-duration: 1s;
+}
+
+#Blog .content .card .item .body button:hover i {
+    margin-left: 3px;
+}
+
+#Contact_Us form {
+    width: 65%;
+    margin: auto;
+}
+
+#Contact_Us .content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+#Contact_Us .content .collumn {
+    width: 100%;
+}
+
+
+#Contact_Us .content .collumn:nth-child(1),
+#Contact_Us .content .collumn:nth-child(2) {
+    width: 50%;
+}
+
+#Contact_Us .content .collumn:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+#Contact_Us .content .collumn .item:nth-child(1) {
+    margin-right: 10px;
+}
+
+#Contact_Us .content input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    color: #fff;
+    background-color: transparent;
+}
+
+
+
+#Contact_Us .content textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    background-color: transparent;
+    resize: none;
+    color: #fff;
+    height: 150px;
+}
+
+#Contact_Us .content input::placeholder,
+#Contact_Us .content textarea::placeholder {
+    color: #fff;
+}
+
+#Contact_Us .content input:focus,
+#Contact_Us .content textarea:focus {
+    outline: none;
+}
+
+#Contact_Us button {
+    display: block;
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: var(--main-color);
+    cursor: pointer;
+    transition-duration: 0.5s;
+    margin-top: 12px;
+}
+
+#Contact_Us button:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    color: #c1c1c1;
+    background-color: #333333;
+}

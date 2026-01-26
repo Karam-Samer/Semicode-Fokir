@@ -12,7 +12,6 @@ nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 nav .container .logo {
@@ -137,8 +136,8 @@ header a::before {
     content: "";
     display: block;
     background-color: var(--main-color);
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border: 3px solid var(--main-color);
     border-radius: 50%;
     position: absolute;
@@ -548,7 +547,7 @@ header a::before {
     margin-bottom: 15px;
 }
 
-#Contact_Us .content .collumn .item:nth-child(1) {
+#Contact_Us .content .collumn:nth-child(1) .item {
     margin-right: 10px;
 }
 
@@ -605,4 +604,5 @@ footer {
     text-align: center;
     color: #c1c1c1;
     background-color: #333333;
+    padding-block: 10px;
 }

@@ -1,4 +1,8 @@
 @media (max-width: 1300px) {
+    .container {
+        width: 90%;
+    }
+
     nav .container .logo {
         width: 20%;
     }
@@ -11,7 +15,7 @@
         background-color: transparent;
         border-radius: 5px;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
     }
 
@@ -44,8 +48,7 @@
     }
 
     nav .container .links ul li:not(:last-child) {
-        margin-right: 0;
-        margin-bottom: 15px;
+        margin: auto auto 15px;
     }
 
     #About .container {
@@ -113,9 +116,14 @@
         flex-basis: 100%;
     }
 
+    #Contact_Us .content .collumn:nth-child(1) .item {
+        margin-right: 0;
+    }
+
     #Contact_Us button {
         width: 100%;
     }
+
 
 
 }
@@ -146,8 +154,6 @@
         font-size: 15px;
     }
 
-
-
     #Contact_Us form {
         width: 80%;
     }
@@ -159,7 +165,7 @@
     }
 
     nav .container .links ul {
-        top: 140px;
+        top: 90px;
         width: 500px;
     }
 
@@ -195,17 +201,6 @@
         width: 50%;
     }
 
-    #Blog .content .card:nth-child(odd) .item {
-        margin-right: auto;
-        margin-left: 0;
-    }
-
-    #Blog .content .card:nth-child(even) .item {
-        margin-left: auto;
-        margin-right: 0;
-    }
-
-
     #Contact_Us form {
         width: 60%;
     }
@@ -217,7 +212,7 @@
     }
 
     nav .container .links ul {
-        top: 120px;
+        top: 100px;
         width: 600px;
     }
 
@@ -246,19 +241,27 @@
         width: 50%;
     }
 
+    #Blog .container .content .card .item {
+        width: 100%;
+        margin: auto;
+    }
+
 
     #Contact_Us form {
         width: 85%;
     }
 
-    #Blog .content .card:nth-child(odd) .item,
-    #Blog .content .card .item {
-        margin: 0;
+    #Blog .content .card:nth-child(3) .item {
+        margin-top: 30px;
     }
 
     #Contact_Us .content .collumn:nth-child(1),
     #Contact_Us .content .collumn:nth-child(2) {
         flex-basis: 50%;
+    }
+
+    #Contact_Us .content .collumn:nth-child(1) .item {
+        margin-right: 10px;
     }
 }
 
@@ -301,25 +304,29 @@
     }
 
 
-    #Blog .content{
+    #Blog .content {
         justify-content: space-between;
     }
 
-    #Blog .content .card{
+    #Blog .content .card {
         margin-bottom: 0px;
         margin: 0;
         width: 32%;
     }
 
-    #Blog .content .card .item {
+    #Blog .content .card .item,
+    #Blog .content .card:nth-child(3) .item {
         margin: 0;
     }
 
-    
+    #Blog .content .card:nth-child(3) .item {
+        margin: auto;
+    }
 
     #Contact_Us form {
         width: 70%;
     }
+
 }
 
 
